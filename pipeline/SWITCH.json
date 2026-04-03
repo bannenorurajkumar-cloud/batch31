@@ -1,0 +1,63 @@
+{
+	"name": "SWITCH",
+	"properties": {
+		"activities": [
+			{
+				"name": "Switch1",
+				"type": "Switch",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"on": {
+						"value": "JAPAN",
+						"type": "Expression"
+					},
+					"cases": [
+						{
+							"value": "INDIA",
+							"activities": [
+								{
+									"name": "Wait_INDIA",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 1
+									}
+								}
+							]
+						},
+						{
+							"value": "USA",
+							"activities": [
+								{
+									"name": "WaitUSA",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 1
+									}
+								}
+							]
+						}
+					],
+					"defaultActivities": [
+						{
+							"name": "Wait_OTHERS",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-03-26T12:37:07Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
